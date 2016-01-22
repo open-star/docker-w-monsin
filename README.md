@@ -9,17 +9,15 @@ https://w-monsin.com を参照願います。
 
 
 ## ディレクトリの説明
-* build： Docker イメージの作成に必要なファイルDockerfile等を置いています。
 * script：w-monsin を構成する全てのコンテナを実行、停止、削除するスクリプトを置いています。
-
 
 ##Docker イメージを使用する方法
 
 ###リポジトリの複製
-	$ git clone https://github.com/mahoshi60/docker-wmonsin.git
+	$ git clone https://github.com/open-star/docker-w-monsin.git
 
 ###ディレクトリの移動
-	$ cd docker-wmonsin
+	$ cd docker-w-monsin
 
 ###実行スクリプトの実行
 下記のスクリプトの実行で、問診票アプリのサーバ側が起動します。
@@ -31,12 +29,13 @@ https://w-monsin.com を参照願います。
 
 ##DockerfileからのDockerイメージの作成方法
 自分のマシンでDockerfileからのDockerイメージの作成する方法について説明します。
-
+Dockerfileの存在するディレクトリに移動して下さい。
+次に、docker build コマンドを実行して下さい。
 ###MongoDB のデータ専用コンテナの作成
-	$ docker build -t mahoshi60/mongo-data build/mongo_data
+	$ docker build -t mongo-data .
 
 ###Node.jsアプリ（w-monsin本体）の作成
-	$ docker build -t mahoshi60/node-ap build/nodejs
+	$ docker build -t w-monsin .
 
 ###Nginx のキャッシュ専用コンテナの作成
-	$ docker build -t mahoshi60/nginx-cache build/nginx_cache
+	$ docker build -t nginx-cache .

@@ -1,4 +1,4 @@
 #!/bin/bash
-docker stop node-ap
+docker stop w-monsin
 docker stop mongo
 docker stop mongo-data
