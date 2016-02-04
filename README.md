@@ -5,6 +5,42 @@
 https://w-monsin.com を参照願います。
 ## ディレクトリの説明
 - script：w-monsin を構成する全てのコンテナを実行、停止、削除するスクリプトを置いています。
+## Docker のインストール
+### Linux の場合
+Docker のインストールと動作確認の詳細は、下記ページをご覧下さい。
+http://docs.docker.jp/engine/installation/index.html#linux
+
+### Windows の場合
+Docker Toolbox のインストールと、Docker の動作確認の詳細は、下記ページをご覧下さい。
+http://docs.docker.jp/engine/installation/windows.html
+#### Docker Toolbox のインストール
+- Docker Toolboxをダウンロードし、インストールします。
+
+（注）既に VirtualBox や Git or Windows をインストール済の場合は、セットアップ時に
+ 「インストールするコンポーネントの選択」画面で、VirtualBox 及び、Git or Windows の
+ チェックを外して下さい。
+
+#### Docker の動作確認
+- デスクトップの「Docker Quickstart Terminal」アイコンをダブルクリックします。
+(VirtualBoxにdefaultという名前の仮想マシンが作成され、Git Bash のコンソール画面が表示されます。
+なお、default 仮想マシンが作成されるのは初回のみです。)
+
+- コンソールで下記のコマンドを入力して default 仮想マシン にssh で接続します。
+
+	$ docker-machine ssh default
+	
+- Dockerの動作を確認するため、 hello-world コンテナを実行します。
+
+	$ docker run hello-world
+
+- 下記のメッセージが表示されれば動作はOKです。
+
+	Hello from Docker.
+	This message shows that your installation appears to be working correctly.
+
+### Mac の場合
+Docker Toolbox のインストールと、Docker の動作確認の詳細は、下記ページをご覧下さい。
+http://docs.docker.jp/engine/installation/mac.html
 
 ## w-monsin 関連のコンテナの生成と起動
 ### Linux の場合
