@@ -22,4 +22,5 @@ Linuxの場合の w-monsin のコンテナイメージを使用する方法を�
 自分のマシンでDockerfileからのDockerイメージの作成する方法について説明します。
 - Dockerfileの存在するディレクトリに移動します。
 - docker build コマンドを実行します。
+
 	`$ docker build -t my-w-monsin .`
