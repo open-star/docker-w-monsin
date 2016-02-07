@@ -4,7 +4,7 @@ FROM node:0.10
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 #COPY . /usr/src/app/
-RUN git clone https://github.com/7thCode/womnsin_image.git 
+RUN git clone https://github.com/open-star/womnsin_image.git 
 
 WORKDIR /usr/src/app/womnsin_image/wmonsin
 RUN npm install
