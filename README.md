@@ -66,7 +66,7 @@ w-monsin 関連のコンテナを一括で起動するスクリプトを用意�
 この手順は、暫定です。将来には、この手順を廃止するように改善します。
 
 	$ docker exec -it mongo /bin/bash
-	# echo "db.createUser({user:\"oda\", pwd:\"zz0101\", roles:[ \"readWrite\", \"dbOwner\" ]});" > init.js
+	# echo "db.createUser({user:\"wmmaster\", pwd:\"wmmaster123\", roles:[ \"readWrite\", \"dbOwner\" ]});" > init.js
 	# mongo localhost/patient -quiet init.js
 	# Ctrl+p その後 Ctrl+q　（コンテナを起動したまま、元のシェルに戻る）
 	
