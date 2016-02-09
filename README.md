@@ -59,9 +59,9 @@ w-monsin 関連のコンテナを一括で起動するスクリプトを用意�
 下記のスクリプトの実行で、w-monsin 関連のDockerイメージからコンテナを生成し、
 このコンテナ上でw-monsin関連のプログラムをプロセスとして起動します。
 #####Nginxを使う場合
-	$ script\all-run-nginx.sh
+	$ script/all-run-nginx.sh
 #####Nginxを使わない場合
-	$ script\all-run.sh
+	$ script/all-run.sh
 #### MongoDBのユーザ作成
 この手順は、暫定です。将来には、この手順を廃止するように改善します。
 
