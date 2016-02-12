@@ -49,26 +49,29 @@ http://docs.docker.jp/engine/installation/mac.html
 ## w-monsin 関連のコンテナの生成と起動
 ### Linux の場合
 #### リポジトリの複製
-w-monsin 関連のコンテナを一括で起動するスクリプトを用意しています。お使い下さい。
+w-monsin 関連のコンテナを起動するスクリプトを用意しています。お使い下さい。
 このスクリプトをダウンロードするため、リポジトリを複製します。
 
 	$ git clone https://github.com/open-star/docker-w-monsin.git
 ####ディレクトリの移動
 	$ cd docker-w-monsin
-####コンテナ一括起動スクリプトの実行
+####コンテナ起動スクリプトの実行
 下記のスクリプトの実行で、w-monsin 関連のDockerイメージからコンテナを生成し、
 このコンテナ上でw-monsin関連のプログラムをプロセスとして起動します。
-#####Nginxを使う場合
-	$ script/all-run-nginx.sh
-#####Nginxを使わない場合
-	$ script/all-run.sh
-#### MongoDBのユーザ作成
+#####MongoDBの起動
+	$ script/run-mongo.sh
+#####MongoDBのユーザ作成
 この手順は、暫定です。将来には、この手順を廃止するように改善します。
 
 	$ docker exec -it mongo /bin/bash
 	# echo "db.createUser({user:\"wmmaster\", pwd:\"wmmaster123\", roles:[ \"readWrite\", \"dbOwner\" ]});" > init.js
 	# mongo localhost/patient -quiet init.js
 	# Ctrl+p その後 Ctrl+q　（コンテナを起動したまま、元のシェルに戻る）
+
+#####Nginxを使う場合
+	$ script/run-wmonsin-nginx.sh
+#####Nginxを使わない場合
+	$ script/run-wmonsin.sh
 	
 ### Windows の場合
 - デスクトップの「Docker Quickstart Terminal」アイコンをダブルクリックします。
