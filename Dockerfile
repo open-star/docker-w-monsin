@@ -6,10 +6,10 @@ MAINTAINER 0.1 Masaaki Hoshino <mahoshi60@gmail.com>
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 #COPY . /usr/src/app/
-RUN git clone https://github.com/7thCode/womnsin_image.git 
-#RUN git clone https://github.com/open-star/wmonsin_image.git
+#RUN git clone https://github.com/7thCode/womnsin_image.git 
+RUN git clone https://github.com/open-star/wmonsin_image.git
 
-WORKDIR /usr/src/app/womnsin_image/wmonsin
+WORKDIR /usr/src/app/wmonsin_image/wmonsin
 
 RUN npm install
 RUN npm install bower -g
