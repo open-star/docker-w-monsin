@@ -1,4 +1,5 @@
-FROM node:0.10
+#FROM node:0.10
+FROM node
 
 MAINTAINER 0.1 Masaaki Hoshino <mahoshi60@gmail.com>
 
